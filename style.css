@@ -1,48 +1,341 @@
 *
 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: black; 
-}
-
-.text-container {
-}
-
-.text-container .text.first-text{
-  color: white;
-}
-
-.text-container .text
+a
 {
-  position: relative;
-  color: #ADD8E6;
-  font-size: 30px;
+    text-decoration: none;
+    color:white;
+}
+body
+{
+    display: flex;
+    background-color: white;
+    height: 100%;
+    overflow-x: auto;
+    min-width: 300px;
+}
+/* #24242F*/
+.left-section
+{
+    width: 20%;
+    background-color: #20202A;
+    min-width: 300px;
+    min-height: 900px;
+}
+.right-section
+{
+    width: 80%;
+    background-color: #1E1E28;
+    min-height: 900px;
+}
+
+.background-1
+{
+    position: absolute;
+    
+    background-image: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    width: 100%;
+    height: 45%;
+    opacity: 0.05;
+    display: block;
+    background-color: transparent;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
 }
 
 
-.text.sec-text:before
+div.other-info > div
 {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  border-left: 2px solid #ADD8E6;
-  animation: animate 4s steps(12) infinite;
+    padding: 20px 20px 0px 20px;
 }
 
-@keyframes animate
+.pre-container
 {
-	40%,60% {left: calc(100% + 15px);}
-	100%{left: 0%}
+    width: 100%;
+}
+
+.pfp-section
+{
+    position: -webkit-sticky;
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    justify-content: center;
+    align-items: center;
+    background-color: #24242F;
+    & img 
+    {
+        width: 35%;
+        height: 50%;
+        border-radius: 50%;
+    }
+    & h5 
+    {
+        padding-top: 15px;
+        font-size: 18px;
+        font-weight: 600 !important;
+        color: white;
+    }
+    & span 
+    {
+        font-weight: bold;
+        color: gray;
+        font-size: 17px;
+    }
+}
+/*GENERAL SETTINGS*/
+.progress-container 
+{
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+}
+.progress-bar-90 
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      #FFC107 0% 90%,
+      transparent 20% 50%
+    );
+}
+.progress-bar-90:before
+{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #20202A;
+    transform: translate(-50%, -50%)
+}
+.progress-bar-85 
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      #FFC107 0% 85%,
+      transparent 20% 50%
+    );
+}
+.progress-bar-85:before
+{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #20202A;
+    transform: translate(-50%, -50%)
+}
+.progress-bar-95 
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      #FFC107 0% 95%,
+      transparent 20% 50%
+    );
+}
+.progress-bar-95:before
+{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #20202A;
+    transform: translate(-50%, -50%)
+}
+
+
+hr
+{
+    color: grey;
+    height: 3px;
+    border: none;
+    border-top: solid 2px;
+    margin-top: 10px;
+}
+& ul 
+{
+    list-style: none;
+}
+/*----------------*/
+
+.other-info
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.location-info
+{
+    color: white;
+    padding: 20px;
+    & ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    & ul li
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    & ul li h6
+    {
+        font-size: 17px;
+        display: inline;
+    }
+    & ul li span
+    {
+        font-size: 16px;
+        display: inline;
+    }
+}
+
+.boxes
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.language-box
+{
+    color: white;
+    margin: auto auto;
+
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+
+.progress-container
+{
+    display: flex;
+    & span
+    {
+        justify-content: center;
+        align-items: center;
+        color: #A2A2A8;
+        font-size: 16px;
+        font-weight: bold;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+.skills-bars
+{
+    color: white;
+    & ul li
+    {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px auto;
+    }
+    & ul li h5
+    {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    & .progress-bar-70
+    {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: grey;
+    }
+    & .progress-bar-70:before
+    {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #FFC107;
+    }
+    & .progress-bar-65
+    {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: grey;
+    }
+    & .progress-bar-65:before
+    {
+    position: absolute;
+    content: "";
+    width: 65%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #FFC107;
+    }
+    & .progress-bar-30
+    {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: grey;
+    }
+    & .progress-bar-30:before
+    {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #FFC107;
+    }
+    & hr
+    {
+        margin-top: 8%;
+    }
+}
+
+.download
+{
+    & a
+    {
+        color:#858588;
+        font-weight: bold;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+    & a:hover
+    {
+        color:#a3a3a4;
+    }
 }

@@ -2,24 +2,201 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-  <div class="text-container">
-    <span class="text first-text">{</span>
-    <span class="text sec-text">I am Yane</span>
-    <span class="text first-text">}</span>
-  </div>
+<!-- 1. Наличие на снимка
 
-  <script>
-    const text = document.querySelector(".sec-text");
+2. Наличие на подробна информация за студента - професионален опит, образование и обучения, участия в проект, лични и организационни умения, сертификати и постижения 
+
+3. Добро оформление,  подредба на информацията
+-->
+<body>
+    <div class="left-section">
+        <div class="pfp-section">
+            <img src="https://m.media-amazon.com/images/I/91oxSXgVD6L.jpg" alt="">
+            <h5>Yane Zhekov</h5>
+            <span>High-School Student</span>
+            <span>Programmer Wannabe</span>
+        </div>
+        <div class="other-info">
+            <div class="location-info">
+                <ul>
+                    <li><h6>Residence:</h6><span>Bulgaria</span></li>
+                    <li><h6>City:</h6><span>Varna</span></li>
+                    <li><h6>Age:</h6><span>21</span></li>
+                </ul>
+                <hr>
+            </div>
+            <div class="languages">
+                <div class="boxes">
+                    <div class="language-box">
+                        <div class="progress-container">
+                            <div class="progress-bar-90 procent"><span>90%</span></div>
+                        </div>
+                        <h5>Bulgarian</h5>
+                    </div>
+                    <div class="language-box">
+                        <div class="progress-container">
+                            <div class="progress-bar-85 procent"><span>85%</span></div>
+                        </div>
+                        <h5>English</h5>
+                    </div>
+                    <div class="language-box">
+                        <div class="progress-container">
+                            <div class="progress-bar-95 procent"><span>95%</span></div>
+                        </div>
+                        <h5>Dutch</h5>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+            <div class="skills-bars">
+                <ul>
+                    <li><h5>HTML</h5><span>70%</span></li>
+                    <li class="progress-bar-70"></li>
+                    <li><h5>CSS</h5><span>70%</span></li>
+                    <li class="progress-bar-70"></li>
+                    <li><h5>Wordpress</h5><span>70%</span></li>
+                    <li class="progress-bar-70"></li>
+                    <li><h5>C#</h5><span>70%</span></li>
+                    <li class="progress-bar-70"></li>
+                    <li><h5>C++</h5><span>65%</span></li>
+                    <li class="progress-bar-65"></li>
+                    <li><h5>Python</h5><span>30%</span></li>
+                    <li class="progress-bar-30"></li>
+                    <li><h5>JS</h5><span>30%</span></li>
+                    <li class="progress-bar-30"></li>
+                </ul>
+                <hr>
+            </div>
+            <div class="download">
+                <a href="">DOWNLOAD CV</a>
+            </div>
+        </div>
+        <div class="bottom">
+            
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="background-1">
+
+        </div>
+        <!--
+
+
+            <div class="image-plane">
+                <div class="left-plane">
+                    <h2>
+        
+                    </h2>
+                    <span>
+        
+                    </span>
+                    <button>
+        
+                    </button>
     
-    const textLoad = () => {
-      setTimeout(() => {text.textContent = "I am Yane."},0);
-      setTimeout(() => {text.textContent = "This is my CV."},4000);
-      setTimeout(() => {text.textContent = "Enjoy your stay!"},8000);
-    }
-    textLoad();
-    setInterval(textLoad, 12000);
-  </script>
-  <script src="script.js"></script>
+                </div>
+                <div class="right-plane">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="useful-icons">
+                <div class="first-icon">
+                    <div class="info-box">
+                        <h5>2 +</h5>
+                    </div>
+                    <span>Years Experience</span>
+                </div>
+                <div class="second-icon">
+                    <div class="info-box">
+                        <h5>100+</h5>
+                    </div>
+                    <span>Completed Projects</span>
+                </div>
+                <div class="third-icon">
+                    <div class="info-box">
+                        <h5>100%</h5>
+                    </div>
+                    <span>Innovative</span>
+                </div>
+                <div class="forth-icon">
+                    <div class="info-box">
+                        <h5>10 +</h5>
+                    </div>
+                    <span>Certificates</span>
+                </div>
+            </div>
+            <h4>Work-Experience</h4>
+            <div class="work-experience">
+                <div class="work-place">
+    
+                </div>
+                <div class="work-place">
+                    
+                </div>
+                <div class="work-place">
+                    
+                </div>
+                <div class="work-place">
+                    
+                </div>
+                <div class="work-place">
+                    
+                </div>
+                <div class="work-place">
+                    
+                </div>
+            </div>
+            <h4>Education</h4>
+            <div class="education">
+                <div class="place-education">
+    
+                </div>
+                <div class="place-education">
+                    
+                </div>
+                <div class="place-education">
+                    
+                </div>
+                <div class="place-education">
+                    
+                </div>
+            </div>
+            <h4>Projects</h4>
+            <div class="projects">
+                <div class="project">
+    
+                </div>
+                <div class="project">
+                    
+                </div>
+                <div class="project">
+                    
+                </div>
+                <div class="project">
+                    
+                </div>
+                <div class="project">
+                    
+                </div>
+            </div>
+            <h4>Personal Skills</h4>
+            <div class="personal-skills">
+                <div class="left-list">
+    
+                </div>
+                <div class="right-list">
+                    
+                </div>
+            </div>
+            <h4>Certificates</h4>
+            <div class="certificates">
+                <div class="image-carousel">
+    
+                </div>
+            </div>
+        </div>
+        -->
+
 </body>
 </html>
