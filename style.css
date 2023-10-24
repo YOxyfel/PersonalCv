@@ -43,6 +43,6 @@ body {
 
 @keyframes animate
 {
-	40%,60% {left: calc(100% + 4px);}
+	40%,60% {left: calc(100% + 15px);}
 	100%{left: 0%}
 }
