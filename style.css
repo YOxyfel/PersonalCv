@@ -1,0 +1,48 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black; 
+}
+
+.text-container {
+}
+
+.text-container .text.first-text{
+  color: white;
+}
+
+.text-container .text
+{
+  position: relative;
+  color: #ADD8E6;
+  font-size: 30px;
+}
+
+
+.text.sec-text:before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-left: 2px solid #ADD8E6;
+  animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate
+{
+	40%,60% {left: calc(100% + 4px);}
+	100%{left: 0%}
+}

@@ -1,0 +1,24 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="text-container">
+    <span class="text first-text">Hello, </span>
+    <span class="text sec-text">I am Yane</span>
+  </div>
+
+  <script>
+    const text = document.querySelector(".sec-text");
+    
+    const textLoad = () => {
+      setTimeout(() => {text.textContent = "FreeLancer"},0);
+      setTimeout(() => {text.textContent = "Blogger"},4000);
+      setTimeout(() => {text.textContent = "Youtuber"},8000);
+    }
+    textLoad();
+    setInterval(textLoad, 12000);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
