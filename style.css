@@ -12,6 +12,7 @@ a
 body
 {
     display: flex;
+    flex-direction: row;
     background-color: white;
     height: 100%;
     overflow-x: auto;
@@ -20,14 +21,18 @@ body
 /* #24242F*/
 .left-section
 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     width: 20%;
     background-color: #20202A;
-    min-width: 300px;
+    height: 100%;
+    min-width: 600px;
     min-height: 900px;
 }
 .right-section
 {
-    width: 80%;
+    width: 100%;
     background-color: #1E1E28;
     min-height: 900px;
 }
@@ -35,10 +40,9 @@ body
 .background-1
 {
     position: absolute;
-    
     background-image: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
-    width: 100%;
+    width: inherit;
     height: 45%;
     opacity: 0.05;
     display: block;
