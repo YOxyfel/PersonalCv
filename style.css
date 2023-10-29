@@ -1,115 +1,23 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+body {
+    background-color: #f4f4f4;
 }
-body
-{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr;
-    background-color: white;
-    
-}
-
-body::before
-{
-    content: "";
-    background-image: url("https://img.freepik.com/premium-vector/monster-line-art-doodle-pattern-design-vector_90573-639.jpg");
-    opacity: 0.01; /* Set the background image opacity */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Put it behind the content */    
-}
-
-.container {
+.cv-container {
     display: flex;
-    width: 100%;
-    
+    flex-direction: row;
+    height: 100vh;
 }
 
-.sidebar {
-    flex: 1; /* Take up 20% of the container */
-    background-color: #333;
-    color: #fff;
-    
+.left-side {
+    height: 100vh;
 }
 
-
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    padding: 10px;
-}
-
-.sidebar img
-{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.content {
-    flex: 4; /* Take up 80% of the container */
-    padding: 20px;
-}
-
-/* Media query for mobile responsiveness */
-@media (max-width: 1000px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        flex: 1;
-        width: 100%; /* Full width on mobile */
-    }
-
-    .content {
-        flex: 1;
-        width: 100%; /* Full width on mobile */
-    }
-    body {
-        font-size: 22px; /* Larger font size for mobile */
-    }
-    .sidebar
-    {
-        font-size: 22px; /* Larger font size for mobile */
-    }
-}
-
-.pfp-section
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto auto;
-}
-
-.location-info
-{
-    color: white;
-    padding: 20px;
-    & ul li
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+.fancy {
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    margin: 20px 5px;
+    /* Add animation on hover */
+    transition: transform 0.2s ease;
 }
 
 .boxes
@@ -120,7 +28,7 @@ body::before
 
 .language-box
 {
-    color: white;
+    color: black;
     margin: auto auto;
 
     display: flex;
@@ -132,6 +40,12 @@ body::before
 .progress-container
 {
     display: flex;
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
     & span
     {
         justify-content: center;
@@ -147,79 +61,30 @@ body::before
     }
 }
 
-.progress-container 
-{
-    margin: 10px auto;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    position: relative;
-}
-.progress-bar-90, .progress-bar-85, .progress-bar-95
-{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-.progress-bar-90:before, .progress-bar-85:before, .progress-bar-95::before
-{
-    position: absolute;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    content: "";
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #333;
-    transform: translate(-50%, -50%)
-}
-.progress-bar-90 
-{
-    background: conic-gradient(
-      #FFC107 0% 90%,
-      transparent 20% 50%
-    );
-}
-.progress-bar-85 
-{
-    background: conic-gradient(
-      #FFC107 0% 85%,
-      transparent 20% 50%
-    );
-}
-.progress-bar-95 
-{
-    background: conic-gradient(
-      #FFC107 0% 95%,
-      transparent 20% 50%
-    );
-}
-hr
-{
-    color: grey;
-    height: 3px;
-    border: none;
-    width: 85%;
-    margin: 20px auto;
-    border-top: solid 2px;
-}
-
 .skills-bars
 {
-    color: white;
-    padding-inline: 10px;
+    
+    color: black;
+    & ul
+    {
+        padding-left: 0 !important;
+    }
     & ul li
     {
         display: flex;
         justify-content: space-between;
-        padding: 3px;
-        margin: 5px 0 0 0;
+        margin: 5px auto;
+    }
+    & ul li h5
+    {
+        font-weight: 400;
+        font-size: 18px;
     }
     & .progress-bar-70, .progress-bar-65, .progress-bar-30
     {
         position: relative;
+        width: 100%;
+        height: 5px;
         border-radius: 5px;
         background-color: grey;
     }
@@ -236,48 +101,136 @@ hr
     & .progress-bar-30:before { width: 30%; }
     & hr { margin-top: 8%; }
 }
-::-webkit-scrollbar {
-    width: 0; /* Set the width to 0 */
-}
-/* Optional: You can also hide the track and thumb */
-::-webkit-scrollbar-track {
-    display: none; /* Hide the track */
-}
-::-webkit-scrollbar-thumb {
-    display: none; /* Hide the thumb */
-}
-a
+
+.progress-bar-90, .progress-bar-85, .progress-bar-95
 {
-    text-decoration: none;
-    color:white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.progress-bar-90:before, .progress-bar-85:before, .progress-bar-95::before
+{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #20202A;
+    transform: translate(-50%, -50%)
+}
+.progress-bar-90 
+{
+    background: conic-gradient(
+      #FFC107 0% 90%,
+      transparent 20% 50%
+    );
 }
 
-.bottom::before {
+div.col-12.p-0 >*
+{
+    padding-left: 30px !important;
+}
+
+.titles
+{
+    background-color: lightgray;padding-left: 15px; width: 100%; height:50px; margin: 0; color: white; border-radius: 5px;
+}
+.progress-bar-85 
+{
+    background: conic-gradient(
+      #FFC107 0% 85%,
+      transparent 20% 50%
+    );
+}
+.progress-bar-95 
+{
+    background: conic-gradient(
+      #FFC107 0% 95%,
+      transparent 20% 50%
+    );
+}
+
+.fancy:hover {
+    transform: scale(1.02); /* Increase size on hover */
+}
+
+@media screen and (max-width: 1000px)
+{
+    .fancy:hover {
+        transform: scale(1.00); /* Increase size on hover */
+    }
+}
+
+div.col-lg-8.bg-light.p-5.ml-5 > hr
+{
+    border: none;
+    border-top: 1.5px dashed blue;
+    background-color: white;
+}
+
+.no-pm
+{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#pfp
+{
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+}
+
+.right-side {
+    width: 75%;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-row {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-row {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container .text.first-text{
+    color: white;
+  }
+  
+  .text-container .text
+  {
+    position: relative;
+    color: black;
+  }
+  
+  
+  .text.sec-text:before
+  {
     content: "";
-    background-image: url("https://img.freepik.com/premium-vector/monster-line-art-doodle-pattern-design-vector_90573-639.jpg");
-    opacity: 0.05; /* Set the background image opacity */
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    z-index: -1; /* Put it behind the content */
-}
+    width: 100%;
+    background-color: #f4f4f4;
+    border-left: 2px solid black;
+    animation: animate 6s steps(18) infinite;
+  }
   
-  .download {
-    position: relative; /* Change this to relative */
-    display: flex;
-    z-index: 5;
-    & a {
-      justify-content: center;
-      align-items: center;
-      margin: auto auto;
-      color: rgba(255, 255, 255, 1); /* Set the opacity to 1 */
-      font-weight: bold;
-      font-size: 20px;
-      transition: color 0.3s;
-    }
-    & a:hover {
-      color: white;
-    }
+  @keyframes animate
+  {
+      40%,60% {left: calc(100% + 4px);}
+      100%{left: 0%}
   }

@@ -1,200 +1,329 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Test</title>
 </head>
-<!-- 1. Наличие на снимка
 
-2. Наличие на подробна информация за студента - професионален опит, образование и обучения, участия в проект, лични и организационни умения, сертификати и постижения 
-
+<!--
+1. Наличие на снимка
+2. Наличие на подробна информация за студента - професионален опит, образование и обучения, 
+участия в проект, лични и организационни умения, сертификати и постижения 
 3. Добро оформление,  подредба на информацията
 -->
+
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="pfp-section">
-                <img src="YaneCV.png" alt="Profile Pic Yane">
-                <h5>Yane Zhekov</h5>
-                <p>High-School Student</p>
-                <p>Programmer Wannabe</p>
-            </div>
-            <div class="location-info">
-                <ul>
-                    <li><p>Residence:</p><span>Bulgaria</span></li>
-                    <li><p>City:</p><span>Varna</span></li>
-                    <li><p>Age:</p><span>21</span></li>
-                </ul>
-                
-            </div>
-            <hr>
-            <div class="languages">
-                <div class="boxes">
-                    <div class="language-box">
-                        <div class="progress-container">
-                            <div class="progress-bar-90 procent"><span>90%</span></div>
-                        </div>
-                        <h5>Bulgarian</h5>
-                    </div>
-                    <div class="language-box">
-                        <div class="progress-container">
-                            <div class="progress-bar-85 procent"><span>85%</span></div>
-                        </div>
-                        <h5>English</h5>
-                    </div>
-                    <div class="language-box">
-                        <div class="progress-container">
-                            <div class="progress-bar-95 procent"><span>95%</span></div>
-                        </div>
-                        <h5>Dutch</h5>
+    <div class="container-fluid pl-2">
+        <div class="row left-side">
+            <!-- Left Side (25%) -->
+            <div class="col-lg-3 p-5">
+                <div class="row cv-section mt-2 mb-2">
+                    <!-- Left Side Row 1 -->
+                    <div class="col-12">
+                        <img id="pfp" src="YanePic.jpg">
+                        <h3>Лична Информация</h3>
+                        <hr>
+                        <h5>Яне Жеков</h5>
+                        <p>Студент - 126571<br>Икномически Университет Варна</p>
+                        <p>Номер: 087 745 9296<br>Имейл: zhekov.yane123@gmail.com/ 126571@students.ue-varna.bg</p>
+                        <div class="text-container">
+                            <span class="text first-text"></span>
+                            <span class="text sec-text"></span>
+                          </div>
+                        
+                          <script>
+                            const text = document.querySelector(".sec-text");
+                            
+                            const textLoad = () => {
+                              setTimeout(() => {text.textContent = "Програмист Wannabe"},0);
+                              setTimeout(() => {text.textContent = "Actual tryhard ☻"},6000);
+                              setTimeout(() => {text.textContent = "<code>Please work</code>"},12000);
+                            }
+                            textLoad();
+                            setInterval(textLoad, 18000);
+                          </script>
+                        
                     </div>
                 </div>
-                
+                <div class="row cv-section mt-2 mb-2">
+                    <!-- Left Side Row 2 -->
+                    <div class="col-12">
+                        <h3>Езици</h3>
+                        <hr>
+                        <div class="languages">
+                            <div class="boxes">
+                                <div class="language-box">
+                                    <div class="progress-container">
+                                        <div class="progress-bar-90 "><span>90%</span></div>
+                                    </div>
+                                    <p>Български</p>
+                                </div>
+                                <div class="language-box">
+                                    <div class="progress-container">
+                                        <div class="progress-bar-85 "><span>85%</span></div>
+                                    </div>
+                                    <p>Английски</p>
+                                </div>
+                                <div class="language-box">
+                                    <div class="progress-container">
+                                        <div class="progress-bar-95 "><span>95%</span></div>
+                                    </div>
+                                    <p>Нидерландски</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row cv-section mt-2 mb-2">
+                    <!-- Left Side Row 3 -->
+                    <div class="col-12">
+                        <h3>Умения</h3>
+                        <hr>
+                        <div class="skills-bars">
+                            <ul>
+                                <li>
+                                    <h5>HTML</h5><span>70%</span>
+                                </li>
+                                <li class="progress-bar-70"></li>
+                                <li>
+                                    <h5>CSS</h5><span>70%</span>
+                                </li>
+                                <li class="progress-bar-70"></li>
+                                <li>
+                                    <h5>Wordpress</h5><span>70%</span>
+                                </li>
+                                <li class="progress-bar-70"></li>
+                                <li>
+                                    <h5>C#</h5><span>70%</span>
+                                </li>
+                                <li class="progress-bar-70"></li>
+                                <li>
+                                    <h5>C++</h5><span>65%</span>
+                                </li>
+                                <li class="progress-bar-65"></li>
+                                <li>
+                                    <h5>Python</h5><span>30%</span>
+                                </li>
+                                <li class="progress-bar-30"></li>
+                                <li>
+                                    <h5>JS</h5><span>30%</span>
+                                </li>
+                                <li class="progress-bar-30"></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row cv-section mt-2 mb-2">
+                    <!-- Left Side Row 3 -->
+                    <div class="col-12">
+                        <h3 style="padding-top: 20px;">Soft Skills</h3>
+                        <hr>
+                        <div>
+                            <p>Бързо схващащ</p>
+                            <p>Гъвкавост</p>
+                            <p>Програмист на междинно ниво</p>
+                            <p>Перфекционист</p>
+                            <p>Task management</p>
+                            <p>Трудолюбив</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <div class="skills-bars">
-                <ul>
-                    <li><h5>HTML</h5><span>70%</span></li>
-                    <li class="progress-bar-70"></li>
-                    <li><h5>CSS</h5><span>70%</span></li>
-                    <li class="progress-bar-70"></li>
-                    <li><h5>Wordpress</h5><span>70%</span></li>
-                    <li class="progress-bar-70"></li>
-                    <li><h5>C#</h5><span>70%</span></li>
-                    <li class="progress-bar-70"></li>
-                    <li><h5>C++</h5><span>65%</span></li>
-                    <li class="progress-bar-65"></li>
-                    <li><h5>Python</h5><span>30%</span></li>
-                    <li class="progress-bar-30"></li>
-                    <li><h5>JS</h5><span>30%</span></li>
-                    <li class="progress-bar-30"></li>
-                </ul>
-                
-            </div>
-            <hr>
-            <div class="bottom">
-                <div class="download">
-                    <a href="">DOWNLOAD CV</a>
+            <!-- Right Side (75%) -->
+            <div class="col-lg-8 bg-light p-5 ml-5">
+                <div class="row cv-section fancy">
+                    <!-- Right Side Row 1 -->
+                    <div class="col-12 p-0">
+                        <h3 class="titles">Кратко Summary</h3>
+                        <p>На 22 години съм и университетски студент, който обича програмирането над всичко. Винаги
+                            търся нови предизвикателства и начини да подобря уменията си в тази област. В свободното си
+                            време изучавам нови технологии и разработвам собствени проекти. Мечтая да създам иновативни
+                            решения и да допринеса за технологичния свят.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row cv-section fancy">
+                    <!-- Right Side Row 5 -->
+                    <div class="col-12 p-0">
+                        <h3 class="titles">Обучение</h3>
+                        <h5>Биотехнически науки</h5>
+                        <p>2015 - 2021 | Bovenbouw Sint - Lutgart (Middle School)</p>
+                        <p><i>Учено в силно теоретичен клас, с акцент върху физика, химия и математика.</i></p>
+                        <hr>
+                        <h5>Биотехнически науки</h5>
+                        <p>2015 - 2021 | Bovenbouw Sint - Lutgart (Middle School)</p>
+                        <p><i>Изучаване на програмиране (C++) с цел да бъде
+                            може да създава видеоигри, приложения, ботове и др. .
+                            Фокусиране върху back-end и front-end.</i></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row cv-section fancy">
+                    <!-- Right Side Row 2 -->
+                    <div class="col-12 p-0">
+                        <h3 class="titles">Профисонален Опит</h3>
+                        <p><strong>Складов работник</strong></p>
+                        <p>H.Essers</p>
+                        <p>2019 - 2020</p>
+                        <p>Работа в екип, за товарене и разтоварване на камиони</p>
+                        <br>
+                        <p><strong>Офис-Сътрудник</strong></p>
+                        <p>NovaBel</p>
+                        <p>2020 - 2022</p>
+                        <p>Издаване и коригиране на документи за фирмени работници</p>
+                        <br>
+                        <p><strong>Мениджър Продажби</strong></p>
+                        <p>Kleurproject</p>
+                        <p>2022 - 2023</p>
+                        <p>Рекламирането и продаването на кухнески материали, в чужбина</p>
+                        <br>
+                        <p><strong>Кол център</strong></p>
+                        <p>Sutherland</p>
+                        <p>2022 - 2023</p>
+                        <p>Клиентска/ технисческа поддръжка на клиенти при McAfee</p>
+                        <br>
+                        <p><strong>Уеб Дизайнер</strong></p>
+                        <p>Optimiziraime</p>
+                        <p>2023 - 2023</p>
+                        <p>Създаването на сайт/ дизайн за сайт</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row cv-section fancy">
+                    <!-- Right Side Row 3 -->
+                    <div class="col-12 p-0">
+                        <h3 class="titles">Проекти</h3>
+                        <p><strong>Видео Игри:</strong></p>
+                        <ul>
+                            <li>
+                                <p>Beginner parkour - (UE5)</p>
+                                <p><i>Идеята на проекта, беше да свикна с даденият физически двигател. Играта се състои
+                                        от прост "obstacle course".</i></p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Advanced parkour - (UE5)</p>
+                                <p><i>Играта се състои от по-сложен "obstacle course". С цел опростяване на кода и
+                                        увеличаване на производителноста.</i></p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Dungeon Adventure - (UE5)</p>
+                                <p><i>Сравнително лесен за решаване "Dungeon", в който има загадки които трябва да се
+                                        решат, за да се стигне до края и да се спечеле наградата.</i></p>
+                            </li>
+                            <hr>
+                        </ul>
+                        <p><strong>Уебсайтове:</strong></p>
+                        <ul>
+                            <li>
+                                <p>Stilmers.bg (wordpress)</p>
+                                <p><i>Сайт за архитекти и строителство</i></p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Magichome.bg (wordpress)</p>
+                                <p><i>Сайт за услуги в строителството и подобни</i></p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Dominaresidence.bg (wordpress)</p>
+                                <p><i>Сайт за строителски услуги</i>
+                                <p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Imotvarna.bg (wordpress)</p>
+                                <p><i>Сайт за даване на имоти под-наем</i>
+                                <p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Yoxyfel.github.io/Tindog/ (bootstrap)</p>
+                                <p><i>Tinder но за кучета</i>
+                                <p>
+                            </li>
+                            <hr>
+                        </ul>
+                        <p><strong>Други:</strong></p>
+                        <ul>
+                            <li>
+                                <p>100+ C#/C++ Logical Projects (visual studio, c#, c++)</p>
+                                <p><i>Стотици проекти, в които се разработва една или повече логики</i></p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Discord Bots (replit, visual studio code, python)</p>
+                                <p><i>Изкуствен интелект, във формата на бот, който се използва в онлайн платформата
+                                        дискорд</i></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row cv-section fancy">
+                    <!-- Right Side Row 4 -->
+                    <div class="col-12 p-0">
+                        <h3 class="titles">Сертификати</h3>
+                        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="3500">
+                                    <img src="Programming Basics - March 2022 - Certificate.jpeg" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="3500">
+                                    <img src="Programming Basics with C++ - January 2022 - Certificate.jpeg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="3500">
+                                    <img src="C++ Fundamentals - March 2022 - Certificate.jpeg" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="3500">
+                                    <img src="C++ Advanced - May 2022 - Certificate.jpeg" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="3500">
+                                    <img src="Programming Fundamentals with C# - May 2023 - Certificate.jpeg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="3500">
+                                    <img src="C# Advanced - September 2023 - Certificate.jpeg" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleInterval" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content">
-        <div class="background-1">
-
-        </div>
-            <div class="image-plane">
-                <div class="left-plane">
-                    <h2>
-        
-                    </h2>
-                    <span>
-        
-                    </span>
-                    <button>
-        
-                    </button>
-    
-                </div>
-                <div class="right-plane">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="useful-icons">
-                <div class="first-icon">
-                    <div class="info-box">
-                        <h5>2 +</h5>
-                    </div>
-                    <span>Years Experience</span>
-                </div>
-                <div class="second-icon">
-                    <div class="info-box">
-                        <h5>100+</h5>
-                    </div>
-                    <span>Completed Projects</span>
-                </div>
-                <div class="third-icon">
-                    <div class="info-box">
-                        <h5>100%</h5>
-                    </div>
-                    <span>Innovative</span>
-                </div>
-                <div class="forth-icon">
-                    <div class="info-box">
-                        <h5>10 +</h5>
-                    </div>
-                    <span>Certificates</span>
-                </div>
-            </div>
-            <h4>Work-Experience</h4>
-            <div class="work-experience">
-                <div class="work-place">
-    
-                </div>
-                <div class="work-place">
-                    
-                </div>
-                <div class="work-place">
-                    
-                </div>
-                <div class="work-place">
-                    
-                </div>
-                <div class="work-place">
-                    
-                </div>
-                <div class="work-place">
-                    
-                </div>
-            </div>
-            <h4>Education</h4>
-            <div class="education">
-                <div class="place-education">
-    
-                </div>
-                <div class="place-education">
-                    
-                </div>
-                <div class="place-education">
-                    
-                </div>
-                <div class="place-education">
-                    
-                </div>
-            </div>
-            <h4>Projects</h4>
-            <div class="projects">
-                <div class="project">
-    
-                </div>
-                <div class="project">
-                    
-                </div>
-                <div class="project">
-                    
-                </div>
-                <div class="project">
-                    
-                </div>
-                <div class="project">
-                    
-                </div>
-            </div>
-            <h4>Personal Skills</h4>
-            <div class="personal-skills">
-                <div class="left-list">
-    
-                </div>
-                <div class="right-list">
-                    
-                </div>
-            </div>
-            <h4>Certificates</h4>
-            <div class="certificates">
-                <div class="image-carousel">
-    
-                </div>
-            </div>
-        </div>
-        
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
