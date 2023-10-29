@@ -4,7 +4,7 @@
 
 This is my personal CV created with HTML, CSS, and Bootstrap. It provides information about my background, skills, experience, and projects. The CV is divided into two main sections: the left side with personal information, languages, skills, and soft skills, and the right side with a summary, education, professional experience, projects, and certifications.
 
-## Table of Contents
+## Съдаржание
 
 - [Personal Information](#personal-information)
 - [Languages](#languages)
@@ -16,7 +16,7 @@ This is my personal CV created with HTML, CSS, and Bootstrap. It provides inform
 - [Projects](#projects)
 - [Certifications](#certifications)
 
-## Personal Information
+## Лична Информация
 
 - Name: Яне Жеков
 - Student ID: 126571
@@ -24,13 +24,13 @@ This is my personal CV created with HTML, CSS, and Bootstrap. It provides inform
 - Phone Number: 087 745 9296
 - Email: zhekov.yane123@gmail.com / 126571@students.ue-varna.bg
 
-## Languages
+## Езици
 
 - Български: 90%
 - Английски: 85%
 - Нидерландски: 95%
 
-## Skills
+## Умения
 
 - HTML: 70%
 - CSS: 70%
@@ -49,11 +49,11 @@ This is my personal CV created with HTML, CSS, and Bootstrap. It provides inform
 - Task management
 - Трудолюбив
 
-## Summary
+## Кратко Summary
 
 I'm a 22-year-old university student who is passionate about programming. I'm constantly seeking new challenges and ways to improve my skills in this field. In my free time, I explore new technologies and work on personal projects. My dream is to create innovative solutions and contribute to the world of technology.
 
-## Education
+## Обучение
 
 - Биотехнически науки
   - 2015 - 2021
@@ -65,7 +65,7 @@ I'm a 22-year-old university student who is passionate about programming. I'm co
   - Bovenbouw Sint - Lutgart (Middle School)
   - Изучаване на програмиране (C++) с цел да бъде възможно да се създават видеоигри, приложения, ботове и др. Фокусиране върху back-end и front-end.
 
-## Professional Experience
+## Професионален Опит
 
 - Складов работник
   - H.Essers
@@ -92,7 +92,7 @@ I'm a 22-year-old university student who is passionate about programming. I'm co
   - 2023 - 2023
   - Създаване на сайт/дизайн за сайт
 
-## Projects
+## Проекти
 
 ### Видео Игри
 
@@ -108,4 +108,23 @@ I'm a 22-year-old university student who is passionate about programming. I'm co
 ### Уебсайтове
 
 - Stilmers.bg (wordpress)
- 
+
+- Magichome.bg (wordpress)
+
+- Dominaresidence.bg (wordpress)
+
+- Imotvarna.bg (wordpress)
+
+- Yoxyfel.github.io/Tindog/ (bootstrap)
+
+### Други
+
+- 100+ C#/C++ Logical Projects (visual studio, c#, c++)
+
+- Discord Bots (replit, visual studio code, python)
+
+## Сертификати
+
+- C++ - basics, fundamentals, advanced и oop
+
+- C# - basics, fundamentals и advanced
