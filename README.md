@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my personal CV created with HTML, CSS, and Bootstrap. It provides information about my background, skills, experience, and projects. The CV is divided into two main sections: the left side with personal information, languages, skills, and soft skills, and the right side with a summary, education, professional experience, projects, and certifications.
+На 22 години съм и университетски студент, който обича програмирането над всичко. Винаги търся нови предизвикателства и начини да подобря уменията си в тази област. В свободното си време изучавам нови технологии и разработвам собствени проекти. Мечтая да създам иновативни решения и да допринеса за технологичния свят.
 
 ## Съдаржание
 
