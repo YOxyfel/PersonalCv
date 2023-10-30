@@ -11,6 +11,11 @@ body {
     height: 100vh;
 }
 
+.sticky
+{
+    position: sticky !important; left: 0 !important; overflow-y: auto !important;
+}
+
 .fancy {
     border: 1px solid #ccc; /* Add a border */
     border-radius: 10px; /* Add rounded corners */
