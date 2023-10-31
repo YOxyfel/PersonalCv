@@ -166,6 +166,10 @@ div.col-12.p-0 >*
 {
     .fancy:hover {
         transform: scale(1.00); /* Increase size on hover */
+        
+    }
+    .ml-5 {
+        margin-left: 0 !important;
     }
 }
 
